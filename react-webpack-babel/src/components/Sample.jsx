@@ -1,10 +1,13 @@
 import React from "react";
 import { Form } from "semantic-ui-react";
+import { observer } from "mobx-react";
+const Sample = props => {
+	console.log(props);
+	return (
+		<div>
+			{props.store.UserData.title} {props.store.UserData.count}
+		</div>
+	);
+};
 
-const Sample = props => (
-	<div>
-		{props.store.title} {props.store.count}
-	</div>
-);
-
-export default Sample;
+export default observer(Sample);

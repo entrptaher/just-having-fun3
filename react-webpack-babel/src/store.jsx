@@ -1,27 +1,25 @@
-import { observable, action, autorun, intercept } from "mobx";
+import { observable, action, autorun, intercept, computed } from "mobx";
 class Store {
-	@observable title = "Hello from Mobx";
-	@observable count = 0;
+	@observable
+	userData = {
+		title: "Hello from Mobx",
+		count: 0
+	};
 
-	// various store related actions
 	@action
-	updateTitle(event) {
-		this.title = event.target.value;
+	updateTitle(value) {
+		this.userData.title = value;
+		this.userData.count = this.userData.count + 1;
+		console.log(this.userData);
 	}
 
-	@action
-	updateTitle2(value) {
-		this.title = value;
-		this.count = this.count + 1
+	@computed
+	get UserData() {
+		return this.userData;
 	}
 }
 
 // create a store and export it
 // You can access the store from any component
 const store = new Store();
-
-autorun(() => {
-	console.log(store);
-});
-
 export default store;

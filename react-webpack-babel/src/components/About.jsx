@@ -1,14 +1,16 @@
 import React from "react";
 import { observer } from "mobx-react";
+import Sample from "./Sample";
 
 function showData(props) {
-	props.store.updateTitle2("I am Updated");
+	props.store.updateTitle("I am Updated");
 }
 
-const About = observer(props => (
+const About = props => (
 	<div onClick={() => showData(props)}>
-		Update Store, Current value: {props.store.title} {props.store.count}
+		Update Store, Current value
+		<Sample {...props} />
 	</div>
-));
+);
 
-export default About;
+export default observer(About);

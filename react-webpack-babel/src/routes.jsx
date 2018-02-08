@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
-import App from "./app";
+import Home from "./components/Home";
 import About from "./components/About";
 import Sample from "./components/Sample";
 import "styles/index.scss";
@@ -18,7 +18,7 @@ class Routes extends React.Component {
 					<Route
 						exact
 						path="/"
-						render={props => <App {...props} store={store} />}
+						render={props => <Home {...props} store={store} />}
 					/>
 					<Route
 						path="/messages"
