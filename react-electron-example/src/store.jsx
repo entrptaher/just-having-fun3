@@ -1,6 +1,7 @@
 import { observable, action, autorun, intercept, computed } from "mobx";
 import { create, persist } from "mobx-persist";
 import localForage from "localforage";
+import { createPost } from "./actions";
 
 class Store {
   @persist("list")
@@ -25,8 +26,12 @@ class Store {
 const store = new Store();
 export default store;
 
-autorun(() => {
-  console.log(store.users.length);
+autorun(async () => {
+  store.users.slice();
+  const data = store.users[store.users.length - 1];
+  if (data) {
+    await createPost(data);
+  }
 });
 
 // const hydrate = create({
