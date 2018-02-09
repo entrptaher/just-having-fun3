@@ -12,7 +12,7 @@ let mainWindow;
 const autoUpdater = require('electron-updater').autoUpdater;
 
 function createWindow() {
-  mainWindow = new BrowserWindow({width: 900, height: 680});
+  mainWindow = new BrowserWindow({width: 640, height: 480});
   mainWindow.loadURL(
     isDev
       ? 'http://localhost:3000'

@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Home from "./components/Home";
-import About from "./components/About";
-import Sample from "./components/Sample";
+import Messages from "./components/Messages";
+import Settings from "./components/Settings";
 
 // Pass the store
 import store from "./store";
@@ -21,11 +21,11 @@ class Routes extends React.Component {
 					/>
 					<Route
 						path="/messages"
-						render={props => <Sample {...props} store={store} />}
+						render={props => <Messages {...props} store={store} />}
 					/>
 					<Route
-						path="/friends"
-						render={props => <About {...props} store={store} />}
+						path="/settings"
+						render={props => <Settings {...props} store={store} />}
 					/>
 				</div>
 			</Router>
