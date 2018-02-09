@@ -1,20 +1,6 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "id": 2
-    },
-    {
-      "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
       "id": "6f92d95540dc079c174891a0a8a2464505b84bb4",
       "title": "1249 Kinup Turnpike",
       "author": "Sallie"
