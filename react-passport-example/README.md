@@ -46,16 +46,16 @@ $ yarn run bundle
 
 Home page before login:
 
-![Alt Home Page](/README/home.png?raw=true)
+![Alt Home Page](README/home.png?raw=true)
 
 Sign up page:
 
-![Alt Signup Page](/README/signup.png?raw=true)
+![Alt Signup Page](README/signup.png?raw=true)
 
 Login page:
 
-![Alt Login Page](/README/login.png?raw=true)
+![Alt Login Page](README/login.png?raw=true)
 
 Dashboard which is only accessible after login:
 
-![Alt Dashboard](/README/dashboard.png?raw=true)
+![Alt Dashboard](README/dashboard.png?raw=true)
